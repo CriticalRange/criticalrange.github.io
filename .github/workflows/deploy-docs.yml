@@ -27,11 +27,12 @@ jobs:
 
 
       - name: Setup Node.js
-        working-directory: docs/
+        
         uses: actions/setup-node@v3
         with:
           node-version: 16
           cache: pnpm
+        working-directory: docs/  
 
       - name: Install Deps
         working-directory: docs/
