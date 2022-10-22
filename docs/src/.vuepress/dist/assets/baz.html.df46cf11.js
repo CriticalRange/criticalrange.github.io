@@ -1,0 +1,1 @@
+import{aa as e,B as t,C as a,A as o}from"./app.1f6addb2.js";import"./vendor.8c1d907a.js";const s={},c=o("p",null,"Feature details here.",-1),r=[c];function _(n,l){return t(),a("div",null,r)}const f=e(s,[["render",_],["__file","baz.html.vue"]]);export{f as default};
