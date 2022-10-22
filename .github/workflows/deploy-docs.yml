@@ -27,18 +27,18 @@ jobs:
 
 
       - name: Setup Node.js
-        working-directory: ./docs
+        working-directory: docs/
         uses: actions/setup-node@v3
         with:
           node-version: 16
           cache: pnpm
 
       - name: Install Deps
-        working-directory: ./docs
+        working-directory: docs/
         run: pnpm install --frozen-lockfile
 
       - name: Build Docs
-        working-directory: ./docs
+        working-directory: docs/
         env:
           NODE_OPTIONS: --max_old_space_size=8192
         run: pnpm run docs:build
