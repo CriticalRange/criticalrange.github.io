@@ -37,7 +37,7 @@ jobs:
 
       - name: Install Deps
         working-directory: docs/
-        run: pnpm install --force --frozen-lockfile
+        run: pnpm install --force
 
       - name: Build Docs
         working-directory: docs/
