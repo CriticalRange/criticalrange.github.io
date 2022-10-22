@@ -2,28 +2,29 @@ import { navbar } from "vuepress-theme-hope";
 
 export const enNavbar = navbar([
   "/",
+  { text: "Demo", icon: "discover", link: "/demo/" },
   {
     text: "Guide",
     icon: "creative",
     prefix: "/guide/",
-    link: "/guide/",
-  },
+    children: [
       {
-        text: "About PojavLauncher",
+        text: "Bar",
         icon: "creative",
-        prefix: "about-pojavlauncher/",
-        children: ["legal", { text: "...", icon: "more", link: "" }],
+        prefix: "bar/",
+        children: ["baz", { text: "...", icon: "more", link: "" }],
       },
       {
-        text: "Updates",
+        text: "Foo",
         icon: "config",
-        prefix: "updates/",
-        children: ["pojavisnotonplaystore", { text: "...", icon: "more", link: "" }],
+        prefix: "foo/",
+        children: ["ray", { text: "...", icon: "more", link: "" }],
       },
-      {
-        text: "Contribution",
-        icon: "config",
-        prefix: "contribution/",
-        children: ["pojavisnotonplaystore", { text: "...", icon: "more", link: "" }],
-      },
+    ],
+  },
+  {
+    text: "V2 Docs",
+    icon: "note",
+    link: "https://vuepress-theme-hope.github.io/v2/",
+  },
 ]);

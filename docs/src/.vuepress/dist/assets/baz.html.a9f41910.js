@@ -1,1 +1,0 @@
-import{aa as e,B as t,C as o,A as a}from"./app.1f6addb2.js";import"./vendor.8c1d907a.js";const c={},s=a("p",null,"功能详情...",-1),_=[s];function n(r,l){return t(),o("div",null,_)}const f=e(c,[["render",n],["__file","baz.html.vue"]]);export{f as default};
