@@ -36,6 +36,17 @@ jobs:
       - name: Install Deps
         working-directory: docs/
         run: pnpm install --frozen-lockfile
+        
+      - name: Clear temp
+        uses: JesseTG/rm@v1.0.3
+        with:
+          path: /docs/.vuepress/.temp
+
+      - name: Clear cache
+        uses: JesseTG/rm@v1.0.3
+        with:
+          path: /docs/.vuepress/.cache
+
 
       - name: Build Docs
         working-directory: docs/
