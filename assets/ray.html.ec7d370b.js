@@ -1,0 +1,1 @@
+import{aa as e,B as t,C as o,A as a}from"./app.8e091114.js";import"./vendor.bfaafc04.js";const c={},r=a("p",null,"功能详情...",-1),s=[r];function _(n,l){return t(),o("div",null,s)}const f=e(c,[["render",_],["__file","ray.html.vue"]]);export{f as default};
