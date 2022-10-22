@@ -3,7 +3,7 @@ import { enNavbar, zhNavbar } from "./navbar/index.js";
 import { enSidebar, zhSidebar } from "./sidebar/index.js";
 
 export default hopeTheme({
-  hostname: "https://vuepress-theme-hope-docs-demo.netlify.app",
+  hostname: "https://criticalrange.github.io",
 
   author: {
     name: "Mr.Hope",
@@ -14,9 +14,9 @@ export default hopeTheme({
 
   logo: "/logo.svg",
 
-  repo: "vuepress-theme-hope/vuepress-theme-hope",
+  repo: "criticalrange/criticalrange.github.io",
 
-  docsDir: "demo/theme-docs/src",
+  docsDir: "docs/src",
 
   pageInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime"],
 
