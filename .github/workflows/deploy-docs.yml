@@ -19,24 +19,7 @@ jobs:
           # submodules: true
 
       - name: Clear temp
-        uses: JesseTG/rm@v1.0.3
-        with:
-          path: /docs/src/.vuepress/.temp
-
-      - name: Clear cache
-        uses: JesseTG/rm@v1.0.3
-        with:
-          path: /docs/src/.vuepress/.cache
-          
-      - name: Clear node_modules
-        uses: JesseTG/rm@v1.0.3
-        with:
-          path: /docs/node_modules
-          
-      - name: Clear pnpm lock
-        uses: JesseTG/rm@v1.0.3
-        with:
-          path: /docs/pnpm-lock.yaml
+        run: rm -rf docs/src/.vuepress/.temp && rm -rf /docs/src/.vuepress/.cache && rm -rf /docs/node_modules && rm -rf /docs/pnpm-lock.yaml
           
       - name: Install pnpm
         uses: pnpm/action-setup@v2
