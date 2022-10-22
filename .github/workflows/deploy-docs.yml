@@ -40,12 +40,12 @@ jobs:
       - name: Clear temp
         uses: JesseTG/rm@v1.0.3
         with:
-          path: /docs/.vuepress/.temp
+          path: /docs/src/.vuepress/.temp
 
       - name: Clear cache
         uses: JesseTG/rm@v1.0.3
         with:
-          path: /docs/.vuepress/.cache
+          path: /docs/src/.vuepress/.cache
 
 
       - name: Build Docs
