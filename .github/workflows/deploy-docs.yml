@@ -18,12 +18,13 @@ jobs:
           # if your docs needs submodules, uncomment the following line
           # submodules: true
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@v2.2.4
         with:
-          prefer-frozen-lockfile: false
           version: 7
-          run_install: true
+          run_install: |
+            - recursive: true
+              args: [--no-frozen-lockfile, --strict-peer-dependencies]
+            - args: [--global, gulp, prettier, typescript]
 
 
       - name: Setup Node.js
