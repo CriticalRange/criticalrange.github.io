@@ -1,13 +1,10 @@
 import { hopeTheme } from "vuepress-theme-hope";
 import { enNavbar, zhNavbar } from "./navbar/index.js";
 import { enSidebar, zhSidebar } from "./sidebar/index.js";
-import { addViteSsrNoExternal } from 'vuepress-shared';
 
 export default hopeTheme({
   hostname: "https://criticalrange.github.io",
-  extendsBundlerOptions: (config, app) => {
-    addViteSsrNoExternal ({ app, config }, 'vuepress-shared');
-  },
+
   author: {
     name: "Mr.Hope",
     url: "https://mrhope.site",
