@@ -21,21 +21,28 @@ jobs:
       - name: Clear temp
         run: rm -rf docs/src/.vuepress/.temp && rm -rf /docs/src/.vuepress/.cache && rm -rf /docs/node_modules && rm -rf /docs/pnpm-lock.yaml
       
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7
+          run_install: true
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 14
           cache-dependency-path: docs/
+          cache: pnpm
 
       - name: Install Deps
         working-directory: docs/
-        run: npm install
+        run: pnpm install vuepress-shared
 
       - name: Build Docs
         working-directory: docs/
         env:
           NODE_OPTIONS: --max_old_space_size=8192
-        run: npm run docs:build
+        run: pnpm run docs:build
 
       - name: Deploy Docs
         uses: JamesIves/github-pages-deploy-action@v4
