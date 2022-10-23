@@ -11,12 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
       - name: Setup pnpm 
-      - uses: pnpm/action-setup@v2.2.4
+        uses: pnpm/action-setup@v2.2.4
         with:
           version: 7
           run_install: |
@@ -32,7 +32,7 @@ jobs:
           cache-dependency-path: docs/
           cache: pnpm
 
-      - name: Clear caches, temp, node_modules and lockfile
+      - name: Clear caches
         run: rm -rf docs/node_modules docs/pnpm-lock.yaml docs/src/.vuepress/.temp docs/src/.vuepress/.cache
       
       - name: Build Docs
