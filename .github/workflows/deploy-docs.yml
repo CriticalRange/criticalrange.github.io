@@ -35,8 +35,6 @@ jobs:
         working-directory: docs/
         run: pnpm install
 
-      - name: Remove temp and cache
-        run: rm -rf docs/src/.vuepress/.temp docs/src/.vuepress/.cache
       - name: Build Docs
         working-directory: docs/
         env:
