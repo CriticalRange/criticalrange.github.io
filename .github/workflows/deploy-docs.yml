@@ -11,7 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Clear caches
-        run: rm -rf docs/node_modules docs/pnpm-lock.yaml docs/src/.vuepress/.temp docs/src/.vuepress/.cache
+        working-directory: docs/
+        run: rm -rf node_modules pnpm-lock.yaml src/.vuepress/.temp src/.vuepress/.cache
 
       - name: Checkout
         uses: actions/checkout@v3
