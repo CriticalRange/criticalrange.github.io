@@ -15,10 +15,9 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          # if your docs needs submodules, uncomment the following line
-          # submodules: true
 
-      - uses: pnpm/action-setup@v2.2.4
+   - name: Setup pnpm 
+   - uses: pnpm/action-setup@v2.2.4
         with:
           version: 7
           run_install: |
@@ -34,14 +33,11 @@ jobs:
           cache-dependency-path: docs/
           cache: pnpm
 
-      - name: Install Deps
-        working-directory: docs/
-        run: pnpm install
-
+      - name: Clear caches, temp, node_modules and lockfile
+        run: rm -rf docs/node_modules docs/pnpm-lock.yaml docs/src/.vuepress/.temp docs/src/.vuepress/.cache
+      
       - name: Build Docs
         working-directory: docs/
-        env:
-          NODE_OPTIONS: --max_old_space_size=8192
         run: pnpm run docs:build
 
       - name: Deploy Docs
