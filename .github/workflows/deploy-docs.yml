@@ -22,7 +22,7 @@ jobs:
           run_install: |
             - recursive: true
               args: [--no-frozen-lockfile, --strict-peer-dependencies]
-            - args: [--global, gulp, prettier, typescript]
+            - args: [--global, vuepress/client@2.0.0-beta.51, prettier, typescript]
 
 
       - name: Setup Node.js
