@@ -25,7 +25,6 @@ jobs:
           run_install: |
             - recursive: true
               args: [--no-frozen-lockfile, --strict-peer-dependencies]
-            - args: [--global]
 
 
       - name: Setup Node.js
