@@ -17,13 +17,11 @@ jobs:
           fetch-depth: 0
           # if your docs needs submodules, uncomment the following line
           # submodules: true
-      
-      - name: Frozen lockfile
-        run: pnpm config set prefer-frozen-lockfile false
 
       - name: Install pnpm
         uses: pnpm/action-setup@v2
         with:
+          prefer-frozen-lockfile: false
           version: 7
           run_install: true
 
