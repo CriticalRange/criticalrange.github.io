@@ -1,7 +1,7 @@
 import { hopeTheme } from "vuepress-theme-hope";
 import { enNavbar, zhNavbar } from "./navbar/index.js";
 import { enSidebar, zhSidebar } from "./sidebar/index.js";
-import { addViteSsrNoExternal } from 'vuepress-shared@2.0.0-beta.69/node_modules/vuepress-shared/lib/client/index.js';
+import { addViteSsrNoExternal } from 'vuepress-shared@2.0.0-beta.69';
 
 export default hopeTheme({
   hostname: "https://criticalrange.github.io",
