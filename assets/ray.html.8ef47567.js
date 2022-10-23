@@ -1,0 +1,1 @@
+import{aa as e,B as t,C as a,A as r}from"./app.e39615b3.js";import"./vendor.7448fa81.js";const o={},s=r("p",null,"Feature details here.",-1),c=[s];function _(n,l){return t(),a("div",null,c)}const f=e(o,[["render",_],["__file","ray.html.vue"]]);export{f as default};
