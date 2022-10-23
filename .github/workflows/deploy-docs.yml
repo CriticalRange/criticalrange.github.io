@@ -17,9 +17,6 @@ jobs:
           fetch-depth: 0
           # if your docs needs submodules, uncomment the following line
           # submodules: true
-
-      - name: Clear temp
-        run: rm -rf docs/src/.vuepress/.temp && rm -rf /docs/src/.vuepress/.cache && rm -rf /docs/node_modules && rm -rf /docs/pnpm-lock.yaml
       
       - name: Install pnpm
         uses: pnpm/action-setup@v2
