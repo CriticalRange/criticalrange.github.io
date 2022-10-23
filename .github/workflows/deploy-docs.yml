@@ -10,6 +10,9 @@ jobs:
   deploy-gh-pages:
     runs-on: ubuntu-latest
     steps:
+      - name: Clear caches
+        run: rm -rf docs/node_modules docs/pnpm-lock.yaml docs/src/.vuepress/.temp docs/src/.vuepress/.cache
+
       - name: Checkout
         uses: actions/checkout@v3
         with:
@@ -22,7 +25,7 @@ jobs:
           run_install: |
             - recursive: true
               args: [--no-frozen-lockfile, --strict-peer-dependencies]
-            - args: [--global, vuepress/client@2.0.0-beta.51, prettier, typescript]
+            - args: [--global, vuepress/client@2.0.0-beta.51, vue@3.2.41, vuepress@2.0.0-beta.51, vuepress-theme-hope@2.0.0-beta.113]
 
 
       - name: Setup Node.js
@@ -31,9 +34,6 @@ jobs:
           node-version: 14
           cache-dependency-path: docs/
           cache: pnpm
-
-      - name: Clear caches
-        run: rm -rf docs/node_modules docs/pnpm-lock.yaml docs/src/.vuepress/.temp docs/src/.vuepress/.cache
       
       - name: Build Docs
         working-directory: docs/
