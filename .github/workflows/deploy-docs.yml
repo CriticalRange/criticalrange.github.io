@@ -33,7 +33,7 @@ jobs:
 
       - name: Install Deps
         working-directory: docs/
-        run: pnpm install vuepress-shared
+        run: pnpm install
 
       - name: Build Docs
         working-directory: docs/
