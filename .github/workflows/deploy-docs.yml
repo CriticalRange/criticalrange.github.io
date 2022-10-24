@@ -25,7 +25,7 @@ jobs:
           run_install: |
             - recursive: true
               args: [--no-frozen-lockfile, --strict-peer-dependencies]
-            - args: [--global, @vuepress/bundler-vite@2.0.0-beta.51]
+            - args: [--global, vuepress/bundler-vite@2.0.0-beta.51]
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
